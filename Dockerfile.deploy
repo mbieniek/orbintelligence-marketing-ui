@@ -1,0 +1,28 @@
+FROM node:11.4.0-alpine as build
+
+LABEL maintainer Michael Bieniek <michaelpbieniek@gmail.com>
+
+RUN npm install -g create-react-app \
+                   create-react-native-app \
+                   react-native-cli
+RUN mkdir /app
+WORKDIR /app
+COPY package*.json ./
+RUN npm install -qy
+ADD . /app
+
+RUN npm run build
+
+### STAGE 2: Production Environment ###
+FROM nginx:1.13.12-alpine
+RUN rm -rf /etc/nginx/conf.d
+COPY conf /etc/nginx
+ENV TZ America/New_York
+RUN apk --update add \
+		tzdata \
+	&& cp /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone \
+	&& date
+
+COPY --from=build /app/build /usr/share/nginx/html
+EXPOSE 80
+CMD ["nginx", "-g", "daemon off;"]

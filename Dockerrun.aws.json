@@ -1,0 +1,54 @@
+{
+  "AWSEBDockerrunVersion": "2",
+  "volumes": [
+    {
+      "name": "ssl-data",
+      "host": {
+        "sourcePath": "/src"
+      }
+    }
+  ],
+  "containerDefinitions": [
+    {
+      "name": "ui",
+      "image": "684843133177.dkr.ecr.us-east-2.amazonaws.com/orbintelligence-marketing-ui:latest",
+      "essential": true,
+      "memory": 512
+    },
+    {
+      "name": "proxy",
+      "image": "valian/docker-nginx-auto-ssl:latest",
+      "memory": 256,
+      "essential": true,
+      "portMappings": [
+        {
+          "hostPort": 80,
+          "containerPort": 80
+        },
+        {
+          "hostPort": 443,
+          "containerPort": 443
+        }
+      ],
+      "mountPoints": [
+        {
+          "sourceVolume": "ssl-data",
+          "containerPath": "/etc/resty-auto-ssl"
+        }
+      ],
+      "links": [
+        "ui"
+      ],
+      "environment": [
+        {
+          "name": "ALLOWED_DOMAINS",
+          "value": "orbintelligence.com"
+        },
+        {
+          "name": "SITES",
+          "value": "orbintelligence.com=ui:80"
+        }
+      ]
+    }
+  ]
+}
