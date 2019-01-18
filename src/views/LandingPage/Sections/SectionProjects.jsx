@@ -94,6 +94,13 @@ function SectionProjects({ ...props }) {
             <GridItem xs={12} sm={5} md={5} className={classes.mlAuto}>
               <InfoArea
                 className={classes.info4}
+                title="REST API"
+                description="We provide all of our functionality through a REST API. Contact us for more info."
+                icon={Build}
+                iconColor="info"
+              />
+              <InfoArea
+                className={classes.info4}
                 title="Tweet Timeline"
                 description="We provide a timeline of Tweets and their sentiment. You can visually see sentiment fluctuations over time."
                 icon={Timeline}
