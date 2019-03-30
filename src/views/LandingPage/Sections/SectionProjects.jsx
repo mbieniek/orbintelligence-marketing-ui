@@ -17,6 +17,8 @@ import Card from "components/Card/Card.jsx";
 import CardBody from "components/Card/CardBody.jsx";
 import CardHeader from "components/Card/CardHeader.jsx";
 import InfoArea from "components/InfoArea/InfoArea.jsx";
+import Button from "components/CustomButtons/Button.jsx";
+
 
 import projectsStyle from "assets/jss/material-kit-pro-react/views/sectionsSections/projectsStyle.jsx";
 
@@ -39,16 +41,13 @@ function SectionProjects({ ...props }) {
               }`}
             >
               <h2 className={classes.title}>
-                Real Time Twitter Insights and Analytics
+                Free Real Time Twitter Insights and Analytics
               </h2>
               <h5 className={classes.description}>
-              The Orb Intelligence platform provides real time AI powered Twitter insights and analytics.
+              We have developed a free tool that provides real time AI powered Twitter insights and analytics.
               You can craft your customer engagement to improve messaging, increase receptiveness of sales/marketing and understand the impact you are making with your end customer.
-              <a
-                href="https://platform.orbintelligence.com/pages/register-page"
-                className={classes.link}>
-                Try it now for free!
-              </a>
+
+              <p><Button round href="https://platform.orbintelligence.com/pages/register-page" color="info">Try Now!</Button></p>
               </h5>
               <div className={classes.sectionSpace} />
             </GridItem>

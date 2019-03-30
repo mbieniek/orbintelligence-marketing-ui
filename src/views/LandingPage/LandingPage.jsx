@@ -47,7 +47,7 @@ class LandingPage extends React.Component {
               <GridItem xs={12} sm={6} md={6}>
                 <h1 className={classes.title}>Machine Learning Beyond Buzzwords</h1>
                 <h4>
-                  We are a software company focused on making it possible for you to use machine learning without having to hire a team of engineers and data scientists.
+                  We are focused on making it possible for you to use machine learning without having to hire a team of engineers and data scientists.
                 </h4>
                 <br />
               </GridItem>
@@ -57,7 +57,6 @@ class LandingPage extends React.Component {
         <div className={classNames(classes.main, classes.mainRaised)}>
           <div className={classes.container}>
             <SectionProjects />
-            <SectionTeam />
             <SectionWork />
           </div>
         </div>
