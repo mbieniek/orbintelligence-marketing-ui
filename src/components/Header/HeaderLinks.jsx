@@ -88,7 +88,7 @@ function HeaderLinks({ ...props }) {
     <List className={classes.list + " " + classes.mlAuto}>
       <ListItem className={classes.listItem}>
         <Button
-          href="https://platform.orbintelligence.com/pages/login-page"
+          href="https://platform.kickoffintelligence.com/pages/login-page"
           color="transparent"
           target="_blank"
           className={classes.navButton}
@@ -97,7 +97,7 @@ function HeaderLinks({ ...props }) {
           <Fingerprint className={classes.icons} /> Login
         </Button>
         <Button
-          href="https://platform.orbintelligence.com/pages/register-page"
+          href="https://platform.kickoffintelligence.com/pages/register-page"
           color={window.innerWidth < 960 ? "info" : "white"}
           target="_blank"
           className={classes.navButton}

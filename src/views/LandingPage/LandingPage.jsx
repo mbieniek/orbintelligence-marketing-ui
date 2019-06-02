@@ -32,7 +32,7 @@ class LandingPage extends React.Component {
         <Header
           color="transparent"
           routes={dashboardRoutes}
-          brand="Orb Intelligence"
+          brand="Kickoff Intelligence"
           links={<HeaderLinks dropdownHoverColor="info" />}
           fixed
           changeColorOnScroll={{
@@ -65,7 +65,7 @@ class LandingPage extends React.Component {
             <div>
             <p className={classes.right}>
               &copy; {1900 + new Date().getYear()}{" "}
-              Orb Intelligence, machine learning beyond buzzwords
+              Kickoff Intelligence, machine learning beyond buzzwords
             </p>
             </div>
           }

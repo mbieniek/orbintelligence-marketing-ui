@@ -22,7 +22,7 @@ class SectionWork extends React.Component {
             <h2 className={classes.title}>Get in touch with us</h2>
             <h4 className={classes.description}>
             </h4>
-            <form action="https://formspree.io/contact@orbintelligence.com" method="POST">
+            <form action="https://formspree.io/michael@kickoffsoftware.com" method="POST">
               <GridContainer>
                 <GridItem xs={12} sm={6} md={6}>
                   <CustomInput

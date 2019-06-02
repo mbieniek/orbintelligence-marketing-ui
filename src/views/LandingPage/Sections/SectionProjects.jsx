@@ -44,7 +44,7 @@ function SectionProjects({ ...props }) {
                 Free Real Time Twitter Insights and Analytics
               </h2>
               <h5 className={classes.description}>
-              We have developed a free tool that provides real time AI powered Twitter insights and analytics.
+              The Kickoff Intelligence platform provides real time AI powered Twitter insights and analytics.
               You can craft your customer engagement to improve messaging, increase receptiveness of sales/marketing and understand the impact you are making with your end customer.
 
               <p><Button round href="https://platform.orbintelligence.com/pages/register-page" color="info">Try Now!</Button></p>

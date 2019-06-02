@@ -42,11 +42,11 @@
       "environment": [
         {
           "name": "ALLOWED_DOMAINS",
-          "value": "orbintelligence.com"
+          "value": "kickoffintelligence.com"
         },
         {
           "name": "SITES",
-          "value": "orbintelligence.com=ui:80"
+          "value": "kickoffintelligence.com=ui:80"
         }
       ]
     }
